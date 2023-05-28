@@ -39,14 +39,14 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct bus_s - variables -args, file, line content
- * @arg: the  value
- * @file: a pointer to the  monty file
- * @content: the line content
+ * struct bus_t - function for variables -args, file, line content
+ * @arg: value
+ * @file:a pointer to given monty file
+ * @content: line content
  * @lifi: flag change stack <-> queue
- * Description: function carries values through the program
+ * Description: carries values through the program
  */
-typedef struct bus_s
+typedef struct bus_t
 {
 	char *arg;
 	FILE *file;
@@ -55,10 +55,6 @@ typedef struct bus_s
 }  bus_t;
 extern bus_t bus;
 
-{
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
-} instruction_t;
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
